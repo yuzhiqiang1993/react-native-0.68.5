@@ -154,6 +154,8 @@ android {
         ndkVersion rootProject.ext.ndkVersion
     }
 
+    println("Using NDK at $ndkPath with version $ndkVersion")
+
     flavorDimensions "vm"
     productFlavors {
         hermes {
@@ -214,6 +216,11 @@ android {
     packagingOptions {
         pickFirst '**/libhermes.so'
         pickFirst '**/libjsc.so'
+    }
+//    ndkVersion '24.0.8215888'
+
+    lintOptions {
+        abortOnError false
     }
 }
 

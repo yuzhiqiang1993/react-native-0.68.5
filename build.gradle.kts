@@ -6,7 +6,11 @@
  */
 
 val ndkPath by extra(System.getenv("ANDROID_NDK"))
-val ndkVersion by extra(System.getenv("ANDROID_NDK_VERSION"))
+println("ndkPath: $ndkPath")
+val ndkVersion by extra(System.getenv("ANDROID_NDK_VERSION") ?: "24.0.8215888")
+//val ndkVersion by extra(System.getenv("ANDROID_NDK_VERSION") ?: "26.0.10792818")
+println("ndkVersion: $ndkVersion")
+
 
 buildscript {
     repositories {
